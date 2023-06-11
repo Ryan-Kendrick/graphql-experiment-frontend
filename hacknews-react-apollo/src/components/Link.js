@@ -22,7 +22,6 @@ const Link = (props) => {
       }
     }
   `
-  // ...
 
   const { link } = props
   const authToken = localStorage.getItem(AUTH_TOKEN)
