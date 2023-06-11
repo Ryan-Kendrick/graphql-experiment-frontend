@@ -23,15 +23,15 @@ const Link = (props) => {
     }
   `
   // ...
+
+  const { link } = props
+  const authToken = localStorage.getItem(AUTH_TOKEN)
+
   const [vote] = useMutation(VOTE_MUTATION, {
     variables: {
       linkId: link.id,
     },
   })
-
-  const { link } = props
-  const authToken = localStorage.getItem(AUTH_TOKEN)
-
   return (
     <div className="flex mt2 items-start">
       <div className="flex items-center">
